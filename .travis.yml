@@ -22,3 +22,5 @@ branches:
   except:
     - stable
     - release-v2.0
+after_success:
+ - coveralls
