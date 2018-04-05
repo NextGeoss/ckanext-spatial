@@ -26,8 +26,10 @@ then
     git checkout release-v$CKANVERSION-latest
 fi
 python setup.py develop
-pip install -r requirements.txt --allow-all-external
-pip install -r dev-requirements.txt --allow-all-external
+# Travis has an issue with older version of psycopg2 (2.4.5)
+sed -i 's/psycopg2==2.4.5/psycopg2==2.7.3.2/' requirements.txt
+pip install -r requirements.txt
+pip install -r dev-requirements.txt
 cd -
 
 echo "Setting up Solr..."
@@ -69,13 +71,13 @@ echo "Installing ckanext-harvest and its requirements..."
 git clone https://github.com/ckan/ckanext-harvest
 cd ckanext-harvest
 python setup.py develop
-pip install -r pip-requirements.txt --allow-all-external
+pip install -r pip-requirements.txt
 
 paster harvester initdb -c ../ckan/test-core.ini
 cd -
 
 echo "Installing ckanext-spatial and its requirements..."
-pip install -r pip-requirements.txt --allow-all-external
+pip install -r pip-requirements.txt
 python setup.py develop
 
 

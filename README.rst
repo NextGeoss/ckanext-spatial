@@ -5,6 +5,8 @@ ckanext-spatial - Geo related plugins for CKAN
 .. image:: https://travis-ci.org/ViderumGlobal/ckanext-spatial.svg?branch=master
     :target: https://travis-ci.org/ViderumGlobal/ckanext-spatial
 
+.. image:: https://coveralls.io/repos/github/ViderumGlobal/ckanext-spatial/badge.svg?branch=master
+    :target: https://coveralls.io/github/ViderumGlobal/ckanext-spatial?branch=master
 
 This extension contains plugins that add geospatial capabilities to CKAN_,
 including:
