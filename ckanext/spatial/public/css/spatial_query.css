@@ -90,3 +90,13 @@
 .dataset-map-expanded .wrapper {
   margin-top: 383px;
 }
+.dataset-map-expanded #dataset-map {
+   position: static;
+}
+.dataset-map-expanded .primary{
+   margin-top: 384px;
+}
+.leaflet-control-container .leaflet-left,
+.leaflet-control-container .leaflet-right{
+   z-index: 0;
+}
