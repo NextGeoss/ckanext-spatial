@@ -86,6 +86,11 @@
       }
 
       map.addLayer(baseLayer);
+    
+      // Center the map to be Montreal city
+      setTimeout(() => {
+        map.setView(new L.LatLng(45.577023,-73.7785046), 9);
+      }, 0);
 
       return map;
 
