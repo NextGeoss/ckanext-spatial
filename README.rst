@@ -23,7 +23,7 @@ been moved to ckanext-geoview_.
 
 Full documentation, including installation instructions, can be found at:
 
-http://docs.ckan.org/projects/ckanext-spatial
+https://docs.ckan.org/projects/ckanext-spatial/en/latest/
 
 
 Community
